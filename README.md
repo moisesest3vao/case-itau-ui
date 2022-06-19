@@ -1,6 +1,12 @@
-# CaseItauUi
+# case itau Angular UI
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.1.
+Esse projeto é uma aplicação angular da versão 12.2.1. É necessário instalar Node.Js para rodá-la.
+
+## Preview
+Esse projeto foi gerado durante o processo seletivo de estagiários no Banco Itaú, com o objetivo de auxiliar a apresentação da solução proposta para o problema.
+<br>
+<br>
+<img src="https://i.imgur.com/kD1h0eL.png" >
 
 ## Development server
 
