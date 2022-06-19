@@ -1,9 +1,9 @@
 <app-navbar></app-navbar>
 <div class="">
   <div class="center section ">
-    <button class="btn btn-primary mb-4 mt-4 ml-4" (click)="this.cadastrarColaboradores()">GERAR CADASTRO</button>
+    <button class="btn btn-blue mb-4 mt-4 ml-4 text-yellow" (click)="this.cadastrarColaboradores()">GERAR CADASTRO</button>
     <div *ngIf="colaboradores != undefined"></div>
-    <h1 class="ml-4 mb-3 ">Colaboradores: </h1>
+    <h1 class="ml-4 mb-3 ">Colaboradores:</h1>
     <div>
       <div class="card mb-2 mb-2" *ngFor="let colaborador of colaboradores; let i = index">
         <div class="card">
