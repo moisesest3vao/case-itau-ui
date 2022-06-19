@@ -1,6 +1,6 @@
 # case itau Angular UI
 
-Esse projeto é uma aplicação angular da versão 12.2.1. É necessário instalar Node.Js para roda-la.
+Esse projeto é uma aplicação angular da versão 12.2.1. É necessário instalar Node.Js para rodá-la.
 
 ## Preview
 Esse projeto foi gerado durante o processo seletivo de estagiários no Banco Itaú.
