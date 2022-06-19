@@ -1,12 +1,13 @@
-<div class=" bg-dark">
-  <div class="center section bg-dark">
+<app-navbar></app-navbar>
+<div class="">
+  <div class="center section ">
     <button class="btn btn-primary mb-4 mt-4 ml-4" (click)="this.cadastrarColaboradores()">GERAR CADASTRO</button>
     <div *ngIf="colaboradores != undefined"></div>
-    <h1 class="ml-4 mb-3 text-white">Colaboradores: </h1>
+    <h1 class="ml-4 mb-3 ">Colaboradores: </h1>
     <div>
       <div class="card mb-2 mb-2" *ngFor="let colaborador of colaboradores; let i = index">
-        <div class="card bg-dark">
-          <div class="card-body text-white">
+        <div class="card">
+          <div class="card-body ">
             <h5 class="card-title ">Colaborador {{i+1}}</h5>
             <p><strong>Nome:</strong>  {{colaborador.nome}}</p>
             <p><strong>Login:</strong> {{colaborador.login}}</p>
