@@ -1,18 +1,40 @@
 <app-navbar></app-navbar>
 <div class="bg-orange">
   <div class="center section">
-    <button class="btn btn-blue mb-4 mt-4 ml-4 text-yellow" (click)="this.cadastrarColaboradores()">GERAR CADASTRO</button>
+    <button class="btn btn-blue mb-4 mt-4 ml-4 text-yellow" (click)="this.cadastrarColaboradores()">GERAR
+      CADASTRO</button>
     <div *ngIf="colaboradores != undefined"></div>
-    <h2 class="ml-4 mb-3 ">Colaboradores:</h2>
-      <div class="mb-2 mb-2 col-lg-5 col-md-8 col-sm-12 mx-auto" *ngFor="let colaborador of colaboradores; let i = index">
-        <div class="card">
-          <div class="card-body">
-            <h5 class="card-title"><mat-icon class="mat-18">account_circle</mat-icon> Colaborador {{i+1}}</h5>
-            <p><strong>Nome:</strong>  {{colaborador.nome}}</p>
-            <p><strong>Login:</strong> {{colaborador.login}}</p>
-          </div>
-        </div>
-      </div>
+    <h2 class="ml-4 mb-3 "><mat-icon class="mat-18">account_circle</mat-icon> Colaboradores:</h2>
+    <table class="table table-bordered">
+      <thead>
+        <tr class="">
+          <th scope="col"> <mat-icon> format_list_numbered</mat-icon> Index</th>
+          <th scope="col"> <mat-icon>assignment_ind</mat-icon> Nome</th>
+          <th scope="col"> <mat-icon>assignment</mat-icon> Login</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let colaborador of colaboradores; let i = index" (click)="this.visualizarColaborador(i)" >
+          <th scope="row">{{i+1}}</th>
+          <td>{{colaborador.nome}}</td>
+          <td>{{colaborador.login}}</td>
+        </tr>
+      </tbody>
+    </table>
   </div>
 </div>
 
+
+<!-- Modal view Colaborador -->
+<div *ngIf="this.modalViewColaborador" class="mb-2 mb-2 col-lg-5 col-md-8 col-sm-12 mx-auto">
+  <div class="card view-modal modal-body">
+    <div class="card-body">
+      <h5 class="card-title">
+        <mat-icon>account_circle</mat-icon> Colaborador
+      </h5>
+      <p><strong>Nome:</strong> {{this.colaboradorParaView?.nome}}</p>
+      <p><strong>Login:</strong> {{this.colaboradorParaView?.login}}</p>
+    </div>
+  </div>
+  <div (click)="toggleModalViewColaborador()" class="overlay"></div>
+</div>

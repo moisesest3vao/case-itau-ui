@@ -10,6 +10,8 @@ import { Component, OnInit } from '@angular/core';
 export class CadastroComponent implements OnInit {
 
   colaboradores: Colaborador[] | undefined;
+  colaboradorParaView: Colaborador | undefined;
+  modalViewColaborador: boolean | undefined;
 
   constructor(private service: CadastroService) { }
 
@@ -24,6 +26,15 @@ export class CadastroComponent implements OnInit {
       console.log(error);
       alert("Um erro ocorreu");
     }
+  }
+
+  visualizarColaborador(index:number){
+    this.colaboradorParaView = this.colaboradores != undefined ? this.colaboradores[index] : undefined;
+    this.toggleModalViewColaborador();
+  }
+
+  toggleModalViewColaborador(){
+    this.modalViewColaborador = !this.modalViewColaborador;
   }
 
 }

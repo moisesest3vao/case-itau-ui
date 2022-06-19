@@ -6,9 +6,6 @@
   width: 100%;
 }
 
-.card:hover{
-  background-color: rgba(128, 128, 128, 0.1);
-}
 
 .bg-grey{
   background-color: grey;
@@ -30,4 +27,38 @@
 h2{
   font-size: 28px;
   font-weight: bold;
+}
+
+tbody tr:hover{
+  background-color: rgba(128, 128, 128, 0.1);
+}
+
+.view-modal {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px #333;
+  min-width: 500px;
+  position: fixed;
+  left: 35%;
+  top: 35%;
+  z-index: 11;
+  display: inline-block;
+  overflow-y: auto;
+  scrollbar-width: thin;
+}
+h5{
+  font-size: 15px;
+  font-weight: bold;
+}
+
+
+.overlay {
+  background: rgba(0, 0, 0, 0.596);
+  height: 100vh;
+  left: 0;
+  opacity: 0.5;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  z-index: 10;
 }
